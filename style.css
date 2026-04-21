@@ -1,0 +1,34 @@
+/* Estilos Neobrutalistas Personalizados */
+
+html {
+    scroll-behavior: smooth;
+    /* Fuente por defecto más gruesa para el cuerpo */
+    font-weight: 500; 
+}
+
+/* Forzar que los elementos interactivos tengan puntero y reacción */
+button, a {
+    cursor: pointer;
+}
+
+/* Ajustes de selección de texto */
+::selection {
+    background-color: #000000;
+    color: #ccff00;
+}
+
+/* Animación sutil de los bloques principales al cargar (opcional) */
+@keyframes neoAppear {
+    from {
+        transform: translate(8px, 8px);
+        box-shadow: none;
+    }
+    to {
+        transform: translate(0px, 0px);
+        box-shadow: 8px 8px 0px rgba(0,0,0,1);
+    }
+}
+
+#metodo .bg-neoBg {
+    animation: neoAppear 0.5s ease-out;
+}

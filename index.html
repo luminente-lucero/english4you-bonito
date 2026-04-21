@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English 4 You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neoAccent: '#ccff00', // Amarillo Neón
+                        neoBg: '#ffffff',    // Blanco Puro
+                        neoText: '#000000',  // Negro Puro
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Archivo Black', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neo': '8px 8px 0px rgba(0,0,0,1)',
+                        'neo-sm': '4px 4px 0px rgba(0,0,0,1)',
+                        'neo-hover': '2px 2px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-neoBg text-neoText font-sans border-4 border-black min-h-screen">
+
+    <nav class="bg-neoBg border-b-4 border-black sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-heading uppercase tracking-tighter bg-neoAccent border-4 border-black px-4 py-1 shadow-neo-sm">
+                E4Y
+            </h1>
+            <div class="hidden md:flex space-x-6 font-bold uppercase text-sm">
+                <a href="#metodo" class="border-2 border-transparent hover:border-black hover:bg-neoAccent px-3 py-1 transition-all">Método</a>
+                <a href="#niveles" class="border-2 border-transparent hover:border-black hover:bg-neoAccent px-3 py-1 transition-all">Niveles</a>
+                <a href="#recursos" class="border-2 border-transparent hover:border-black hover:bg-neoAccent px-3 py-1 transition-all">Recursos</a>
+            </div>
+            <button id="btn-cta-nav" class="bg-black text-neoAccent px-6 py-2 border-4 border-black font-heading uppercase text-sm hover:bg-neoAccent hover:text-black transition-all shadow-neo-sm hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]">
+                Prueba de Nivel
+            </button>
+        </div>
+    </nav>
+
+    <header class="bg-neoAccent text-black py-24 px-6 border-b-4 border-black">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-5xl md:text-7xl font-heading uppercase mb-8 leading-none tracking-tighter">
+                Domina el inglés con un método académico
+                <div style="height: 20px;"></div>
+                <span class="bg-white px-2 border-4 border-black shadow-neo-sm">garantizado</span>
+            </h2>
+            <p class="text-xl md:text-2xl mb-12 font-bold max-w-3xl mx-auto">Estructura académica basada en el MCER para resultados reales, medibles y sin rodeos.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <button class="bg-white text-black px-10 py-5 border-4 border-black font-heading uppercase text-xl transition-all shadow-neo hover:shadow-none hover:translate-x-[8px] hover:translate-y-[8px]">
+                    Comienza ya
+                </button>
+                <button class="bg-white text-black px-10 py-5 border-4 border-black font-heading uppercase text-xl transition-all shadow-neo hover:shadow-none hover:translate-x-[8px] hover:translate-y-[8px]">
+                    Plan de Estudios
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="metodo" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="p-8 bg-neoBg border-4 border-black shadow-neo">
+                <div class="bg-neoAccent border-4 border-black w-16 h-16 flex items-center justify-center text-4xl mb-6 shadow-neo-sm">📚</div>
+                <h3 class="text-2xl font-heading uppercase mb-4">Rigor</h3>
+                <p class="text-lg font-medium">Contenido estructurado paso a paso, desde gramática fundamental hasta fluidez profesional.</p>
+            </div>
+            <div class="p-8 bg-neoBg border-4 border-black shadow-neo">
+                <div class="bg-neoAccent border-4 border-black w-16 h-16 flex items-center justify-center text-4xl mb-6 shadow-neo-sm">📊</div>
+                <h3 class="text-2xl font-heading uppercase mb-4">Evaluación</h3>
+                <p class="text-lg font-medium">Tests de progreso al finalizar cada módulo para asegurar la retención de lo aprendido.</p>
+            </div>
+            <div class="p-8 bg-neoBg border-4 border-black shadow-neo">
+                <div class="bg-neoAccent border-4 border-black w-16 h-16 flex items-center justify-center text-4xl mb-6 shadow-neo-sm">📥</div>
+                <h3 class="text-2xl font-heading uppercase mb-4">Material</h3>
+                <p class="text-lg font-medium">Acceso ilimitado a guías PDF, ejercicios de refuerzo y listas de vocabulario.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="niveles" class="bg-black text-white py-24 px-6 border-y-4 border-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-heading uppercase text-center mb-16 tracking-tighter">Nuestros Niveles</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-neoBg text-black p-8 border-4 border-white shadow-[8px_8px_0px_rgba(255,255,255,1)]">
+                    <span class="inline-block bg-green-400 text-black font-bold uppercase text-xs px-3 py-1 border-2 border-black mb-4">Principiante</span>
+                    <h4 class="text-4xl font-heading uppercase mb-4">A1 - A2</h4>
+                    <p class="font-bold text-lg mb-6">Construye tus primeras frases y comprende situaciones cotidianas.</p>
+                    <ul class="space-y-3 font-medium border-t-2 border-black pt-4">
+                        <li>[✓] Saludos y presentaciones</li>
+                        <li>[✓] Vocabulario básico</li>
+                        <li>[✓] Tiempos verbales simples</li>
+                    </ul>
+                </div>
+                <div class="bg-neoBg text-black p-8 border-4 border-white shadow-[8px_8px_0px_rgba(255,255,255,1)]">
+                    <span class="inline-block bg-blue-400 text-black font-bold uppercase text-xs px-3 py-1 border-2 border-black mb-4">Intermedio</span>
+                    <h4 class="text-4xl font-heading uppercase mb-4">B1 - B2</h4>
+                    <p class="font-bold text-lg mb-6">Desarrolla fluidez para viajar y mantener conversaciones complejas.</p>
+                    <ul class="space-y-3 font-medium border-t-2 border-black pt-4">
+                        <li>[✓] Conversación fluida</li>
+                        <li>[✓] Redacción de ensayos</li>
+                        <li>[✓] Modismos y Phrasal Verbs</li>
+                    </ul>
+                </div>
+                <div class="bg-neoBg text-black p-8 border-4 border-white shadow-[8px_8px_0px_rgba(255,255,255,1)]">
+                    <span class="inline-block bg-purple-400 text-black font-bold uppercase text-xs px-3 py-1 border-2 border-black mb-4">Avanzado</span>
+                    <h4 class="text-4xl font-heading uppercase mb-4">C1</h4>
+                    <p class="font-bold text-lg mb-6">Perfecciona tu expresión natural y profesional.</p>
+                    <ul class="space-y-3 font-medium border-t-2 border-black pt-4">
+                        <li>[✓] Inglés de negocios</li>
+                        <li>[✓] Debates complejos</li>
+                        <li>[✓] Dominio técnico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-neoBg text-black py-16 px-6 text-center border-t-4 border-black">
+        <p class="font-heading uppercase text-2xl mb-4 bg-neoAccent inline-block border-4 border-black px-4 shadow-neo-sm">English 4 You</p>
+        <p class="font-bold text-sm uppercase">© 2026 HUGO R. RAUSEO. <br> Sin excusas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
